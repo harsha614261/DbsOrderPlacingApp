@@ -152,11 +152,18 @@ a {
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
-        <button>Log In</button>
+        <button onclick="redirect();">Log In</button>
         
         <div class="social">
             <a href="Main.html">Go Back</a>
         </div>
     </form>
 </body>
+<script>
+function redirect()
+    {
+    var url = 'Admin.html';
+    window.location(url);
+    }
+</script>
 </html>
