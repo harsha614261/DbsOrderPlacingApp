@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<Title>User</Title>
+		<style>
+		.div1{
+			background-color:black;
+			height:50px;
+		}
+		.div1 li{
+			list-style-type:none;
+			float:left;
+			padding-top:20px;
+			margin-left:50px;
+		}
+		.div1 li a{
+			text-decoration:none;
+			color:red;
+			font-size:20px;
+		}
+		.div2{
+			background-color:teal;
+			display:none;
+			width:50%;
+			margin-left:25%;
+			border-radius:20px;
+		}
+		.div2 form{
+			padding-top:20px;
+			margin-left:30px;
+			margin-left:30%;
+			padding-bottom:20px;
+		}
+		.div21 h2{
+			text-align:center;
+			
+		}
+		
+		.div21{
+			padding-top:20px;
+		}
+		button{
+			margin-left:80px;
+			font-size:20px;
+		}
+		#place_it:hover{
+			cursor:pointer;
+		}
+		#home:hover{
+			cursor:pointer;
+		}
+		.div5{
+			background-color:teal;
+			margin-top:20px;
+			margin-left:30%;
+			width:500px;
+			display:block;
+			border-radius:20px;
+		}
+		.div5 h2{
+			margin-left:150px;
+			margin-top:20px;
+			border-radius:20px;
+		}
+		.div5 h3{
+			margin-left:20px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<ul>
+				<li><a onclick="default_it();" id="home">Home</a></li>
+				<li><a onclick="place_order();" id="place_it">Place an order</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+			
+		</div>
+		</br>
+		<div class="div2" id="div2">
+			<div class="div21">
+				<h2>Placing an Order</h2>
+			</div>
+			<form action="#" method="post">
+				Select the stock from here: <select name="menu"><option value="Dbs" id="Dbs">Dbs</option><option value="Amazon" id="Amazon">Amazon</option><option value="Tesla" id="Tesla">Tesla</option></select><br/><br/>
+				Order Type&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <select name="menu"><option value="Limit" id="Limit">Limit</option><option value="Market" id="Market">Market</option></select><br/><br/>
+				Price&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;: <input type="number" id="price" required/></br><br/>
+				Quantity&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;: <input type="number" id="Quantity" required/></br><br/>
+				<button id="place_order">Place Order</button>
+			</form>
+		</div>
+		<div class="div5" id="div5
+">
+			
+				<h2>Welcome to Dbs</h2>
+				<h3>Please click on above menu items to access the services.</h3>
+				<h2>&nbsp;&nbsp;&nbsp;Thank You</h2>
+			
+		</div>
+		<script>
+			function place_order(){
+				element=document.getElementById("div2");
+				element.style.display="block";
+				ele=document.getElementById("div5");
+				ele.style.display="none";
+			}
+			function default_it(){
+				element=document.getElementById("div2");
+				element.style.display="none";
+				ele=document.getElementById("div5");
+				ele.style.display="none";
+				
+				
+			}
+		</script>
+	</body>
+	
+</html>
