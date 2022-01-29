@@ -2,9 +2,17 @@
 	<head>
 		<Title>User</Title>
 		<style>
+		body{
+				background-image:url('logi.jpg');
+				background-size:cover;
+				height:95%;
+				width:95.6%;
+			}
 		.div1{
 			background-color:black;
 			height:50px;
+			margin-top:-10px;
+			width:100%;
 		}
 		.div1 li{
 			list-style-type:none;
@@ -64,6 +72,9 @@
 		.div5 h3{
 			margin-left:20px;
 		}
+		.price{
+			display:block;
+		}
 		</style>
 	</head>
 	<body>
@@ -81,15 +92,16 @@
 				<h2>Placing an Order</h2>
 			</div>
 			<form action="#" method="post">
-				Select the stock from here: <select name="menu"><option value="Dbs" id="Dbs">Dbs</option><option value="Amazon" id="Amazon">Amazon</option><option value="Tesla" id="Tesla">Tesla</option></select><br/><br/>
-				Order Type&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <select name="menu"><option value="Limit" id="Limit">Limit</option><option value="Market" id="Market">Market</option></select><br/><br/>
-				Price&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;: <input type="number" id="price" required/></br><br/>
-				Quantity&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;: <input type="number" id="Quantity" required/></br><br/>
+				Select the stock from here: <select name="menu" onChange="showHide()" id="menu"><option value="Dbs" id="Dbs">Dbs</option><option value="Amazon" id="Amazon">Amazon</option><option value="Tesla" id="Tesla">Tesla</option></select><br/><br/>
+				Order Type&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <select name="menu" id="menu"><option value="Limit" id="Limit">Limit</option><option value="Market" id="Market">Market</option></select><br/><br/>
+				<div class="price" id="price">
+					Price&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;: <input type="number" required/></br><br/>
+				</div>
+				Quantity&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;: <input type="number" id="Quantity" required/></br><br/>
 				<button id="place_order">Place Order</button>
 			</form>
 		</div>
-		<div class="div5" id="div5
-">
+		<div class="div5" id="div5">
 			
 				<h2>Welcome to Dbs</h2>
 				<h3>Please click on above menu items to access the services.</h3>
@@ -107,10 +119,16 @@
 				element=document.getElementById("div2");
 				element.style.display="none";
 				ele=document.getElementById("div5");
-				ele.style.display="none";
-				
-				
+				ele.style.display="block";
 			}
+			function showHide() {
+				 t = document.getElementById('menu');
+				if (t.value == 'Limit') {
+					document.getElementById('price').style.display = 'block';
+				} else {
+					document.getElementById('price').style.display = 'none';
+				}
+			}	
 		</script>
 	</body>
 	
